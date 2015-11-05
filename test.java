@@ -1,4 +1,3 @@
-///// test
 float goldx,goldy;
 float lestatx=10;
 float lestaty=10;    //position of creature
@@ -22,6 +21,7 @@ void setup(){
 }
 void draw(){   //lestat
 fill(0);
-rect(dx,dy,50,140);
-ellipse(
+rect(dx,dy,20,90);
+ellipse(dx+16,dy-9,32,32);
+
 }
