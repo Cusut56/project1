@@ -1,26 +1,55 @@
 float goldx,goldy;
-float lestatx=10;
-float lestaty=10;    //position of creature
-float hermanx=50;
-float hermany=100;    //position of monster
-float dx=250;
-float dy=150;
-float  horizon=  height/4;
+ffloat goldX,goldY;
+float lestatX,lestatY;
+float hermanX,hermanY;
+float horizon;
 
-int count=0;
-//size:
+float DX,DY;
+float x,y,w,h;
+float score;
+float top,bottom,right, left;
+
+
 
 
 void setup(){
-  size(1000,820);  
-   background(75,175,100);
-  horizon=  height/4;
- lestatx=width/2;
-  hermany=height/2;
+  size(700,580);
+  horizon= height/4;
+  x=150;
+  y=75; 
 
+
+ // X=width/2;
+ //Y=width/2;
+  DX=3;
+  DY=2;
+  
+  
 }
-void draw(){   //lestat
-fill(0);
+void reset(){
+x= 150;
+y= 75;
+DX= 50;
+DY= 50;
+x=random(0,500);
+y=random(250.500);
+DX=random(-1,+1);
+DY=random(-1,+1);
+score=50;
+top=0;
+bottom=500;
+right=500;
+left=0;
+}
+void draw(){
+    background(50,160,80);
+    fill(255,255,0);   
+    
+ ellipse(x,y,50,50);
+ 
+  rect(100,200,150,110);
+ //triangle(290,200,horizon,90,90,horizon -30);
+}
 rect(dx,dy,20,90);
 ellipse(dx+16,dy-9,32,32);
 
