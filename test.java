@@ -1,56 +1,40 @@
-float goldx,goldy;
-ffloat goldX,goldY;
+flfloat goldx,goldy;
+float goldX,goldY;
 float lestatX,lestatY;
+float lestatDX,lestatDY;
 float hermanX,hermanY;
+float hermanDX,hermanDY;
 float horizon;
-
-float DX,DY;
+float sunX,sunY;
 float x,y,w,h;
-float score;
-float top,bottom,right, left;
-
-
+float DX,DY;
 
 
 void setup(){
-  size(700,580);
-  horizon= height/4;
-  x=150;
-  y=75; 
-
-
- // X=width/2;
- //Y=width/2;
+  size(680,480);
+  horizon=height/4;
+  sunX=width*1/4;
+   x=width/2;
+ y=width/2;
   DX=3;
   DY=2;
+  reset();
   
   
 }
 void reset(){
-x= 150;
-y= 75;
-DX= 50;
-DY= 50;
-x=random(0,500);
-y=random(250.500);
-DX=random(-1,+1);
-DY=random(-1,+1);
-score=50;
-top=0;
-bottom=500;
-right=500;
-left=0;
+ lestatX=30;
+hermanY=horizon-20;
+lestatDX=3;
+hermanDY=2;
 }
 void draw(){
-    background(50,160,80);
-    fill(255,255,0);   
+    background(250,100,180);     
     
- ellipse(x,y,50,50);
- 
-  rect(100,200,150,110);
- //triangle(290,200,horizon,90,90,horizon -30);
-}
-rect(dx,dy,20,90);
-ellipse(dx+16,dy-9,32,32);
-
+ ellipse(sunX,sunY,50,50); 
+  rect(90,100,150,110);
+ //triangle (280,100,horizon,90.90,horizon-30); 
+ellipse(DX +250,DY +320,42,42);
+rect(DX+240,DY+330,42,92);
+fill(255,255,0);
 }
